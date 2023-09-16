@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://pl0gdeew0upv"]
+
+[ext_resource type="Texture2D" uid="uid://cf7tl8ycm755i" path="res://Heroi.png" id="1_fw7y0"]
+[ext_resource type="Script" path="res://Heroi.cs" id="1_iqent"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lj07"]
+size = Vector2(30, 42)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(497, 242)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_iqent")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_fw7y0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_8lj07")
